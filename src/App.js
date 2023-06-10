@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUsers } from "./actions/userActions";
-import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -57,7 +56,6 @@ function App() {
     );
   });
 
-  // Sort the filteredUsers based on the sortConfig
   const sortedUsers = [...filteredUsers].sort((a, b) => {
     if (a[sortConfig.key] < b[sortConfig.key]) {
       return sortConfig.direction === "asc" ? -1 : 1;
